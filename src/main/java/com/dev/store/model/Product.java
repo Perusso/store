@@ -11,15 +11,18 @@ public class Product {
     @Column(name = "id", nullable = false)
     private int id;
 
+    @Column(name = "name", nullable = false)
     private String name;
 
+    @Column(name = "description", nullable = false)
     private String description;
 
+    @Column(name = "price", nullable = false)
     private double price;
 
+    @Column(name = "wholesale_price", nullable = false)
     private double wholesalePrice;
 
-    //getters and setters
     public int getId() {
         return id;
     }
