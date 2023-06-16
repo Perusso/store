@@ -23,6 +23,17 @@ public class Product {
     @Column(name = "wholesale_price", nullable = false)
     private double wholesalePrice;
 
+    @OneToOne(mappedBy = "product", cascade = CascadeType.REMOVE, optional = false, orphanRemoval = true)
+    private Inventory inventory;
+
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Inventory inventory) {
+        this.inventory = inventory;
+    }
+
     public int getId() {
         return id;
     }
